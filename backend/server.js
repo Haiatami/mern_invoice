@@ -8,7 +8,7 @@ import morgan from 'morgan';
 const app = express();
 
 //
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'npm') {
 	app.use(morgan('dev'));
 }
 
