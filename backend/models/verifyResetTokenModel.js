@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
@@ -6,7 +6,7 @@ const verifyResetTokenSchema = new Schema({
 	_userId: {
 		type: mongoose.Schema.Types.ObjectId,
 		required: true,
-		ref: 'User',
+		ref: "User",
 	},
 	token: { type: String, required: true },
 	createdAt: {
@@ -17,6 +17,9 @@ const verifyResetTokenSchema = new Schema({
 	},
 });
 
-const VerifyResetToken = mongoose.model('VerifyResetToken', verifyResetTokenSchema);
+const VerifyResetToken = mongoose.model(
+	"VerifyResetToken",
+	verifyResetTokenSchema
+);
 
 export default VerifyResetToken;

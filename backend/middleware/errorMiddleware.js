@@ -5,7 +5,7 @@ const errorHandler = (err, req, res, next) => {
 		success: false,
 		message: err.message,
 		statusCode,
-		stack: process.env.NODE_ENV === 'production' ? null : err.stack,
+		stack: process.env.NODE_ENV === "production" ? null : err.stack,
 	});
 };
 
